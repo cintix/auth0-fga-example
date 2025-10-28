@@ -35,42 +35,13 @@ All required FGA values must be provided using *appsettings.json* or *User Secre
     }
   }
 }
+```
 
-Files Included
-
-    Program.cs
-
-    Auth0FgaService.cs
-
-    TestScenario.cs
-
-    Models.cs
-
-    ObjectFormatter.cs
-
-    Config/ClientConfiguration.cs
-
-Key Error Handling Snippet
-
+### Key Error Handling Snippet
+```c#
 if (errorMessage.IndexOf("tuple to be written already existed", StringComparison.OrdinalIgnoreCase) >= 0)
 {
     // Handle duplicate tuple
     await RemoveTemporaryUserFrom(...);
 }
-
-Requirements
-
-    .NET 8+
-
-    OpenFGA SDK
-
-    Auth0 FGA Store and Authorization Model configured
-
-    This example is intentionally minimal to focus on handling the duplicate tuple scenario caused by temporary access re-application.
-
-
----
-
-### Næste trin:
-Vil du have, at jeg samler alle filerne i én struktur med filnavne præcis som de skal indtastes i din gist editor?  
-Så du blot kan copy/paste én efter én?
+```
